@@ -3,6 +3,8 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import OnClickLesson from './components/onClickLesson'
+import InfoBox from './components/InfoBox'
 
 function App() {
 
@@ -34,10 +36,19 @@ const course = {
   completed: 1
 };
 
+  function showTechnology(name) {
+    console.log("Wybrano: " + name);
+  }
+
+const technologies = ["React", "JavaScript", "CSS"];
+
   return (
     <div>
 
-      <p>zadanie 16</p>
+      {
+        technologies.map((tech) => (<InfoBox lesson={tech} />))
+      }
+      {/* <p>zadanie 16</p>
 
       <h1>{app.name}</h1>
 
@@ -56,6 +67,18 @@ const course = {
       <p>Kategoria: {technology.category}</p>
 
       <p>Liczba godzin: {technology.hours}</p>
+
+      <OnClickLesson />
+      <br/>
+
+      <button onClick = {() => showTechnology("React")}>
+        d
+      </button><br/>
+
+      {technologies.map((t) => (
+        <button>{t}</button>
+      ))} */}
+
 
     </div>
   );
