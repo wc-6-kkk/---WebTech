@@ -1,9 +1,10 @@
+import Counter from "./Counter";
 function Technology({name, category, hours, image}) {
   
   const getImageUrl = (fileName) => {
     return new URL(`../assets/${fileName}`, import.meta.url).href;
   };
-
+  
   return (
     <section className="technology">
       <h3>{name}</h3>
@@ -16,6 +17,7 @@ function Technology({name, category, hours, image}) {
       }}>
         Pokaż informacje
       </button>
+      <Counter />
     </section>
   );
 }

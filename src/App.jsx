@@ -16,6 +16,7 @@ import StudentCard from "./components/StudentCard"
 import CourseCard from './components/CourseCard'
 import Book from './components/Book'
 import Product from './components/Product'
+import Counter from './components/Counter'
 
 function App() {
 
@@ -64,6 +65,8 @@ function App() {
 
           {products.map((product) => {return ( <Product key={product.id} name={product.name} price={product.price} onSelect={selectProduct}/> );})}
 
+          <br/><br/><br/>
+          
           {books.map((book) => {
             return (<Book 
               key={book.id}
@@ -72,8 +75,12 @@ function App() {
             />
           )})}
           <hr />
+
+          <br/><br/><br/>
           
           {books.map((book) => (<Book key={book.id} title={book.title} author={book.author} />))}
+
+          <br/><br/><br/>
 
           {technologies.map((tech) => (
               <Technology
@@ -84,6 +91,8 @@ function App() {
                 image={tech.image}
               />
             ))}
+
+            <br/><br/><br/>
 
           {students.map((student) => {
             return (
@@ -96,6 +105,8 @@ function App() {
               />
             );
           })}
+
+          <br/><br/><br/>
           
           <InfoBox />
         </main>
