@@ -17,6 +17,7 @@ import CourseCard from './components/CourseCard'
 import Book from './components/Book'
 import Product from './components/Product'
 import Counter from './components/Counter'
+import ToggleButton from './components/ToggleButton'
 
 function App() {
 
@@ -64,6 +65,7 @@ function App() {
         <main>
 
           <Counter />
+          <ToggleButton />
 
           {products.map((product) => {return ( <Product key={product.id} name={product.name} price={product.price} onSelect={selectProduct}/> );})}
 
