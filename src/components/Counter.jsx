@@ -1,29 +1,22 @@
-import { useState } from 'react'
-function Counter() {
+import { useState } from "react";
 
-  const [count, setCount] = useState(0);
+function Counter(){
+    const [count, setCount] = useState(0);
 
-  function add() {
-    setCount(count + 1);
-  }
+    return (
+        <section>
+            <h3>Licznik: {count}</h3>
 
-  function subtract() {
-    setCount(count - 1);
-  }
-
-  function reset() {
-    setCount(0);
-  }
-
-  return (
-    <div>
-      <p>Licznik: {count}</p>
-
-      <button onClick={add}>+</button>
-      <button onClick={subtract}>-</button>
-      <button onClick={reset}>Reset</button>
-    </div>
-  );
+            <div>
+                <button onClick={() => setCount(count + 1)}>+1</button>
+                <button onClick={() => setCount(count - 1)}>-1</button>
+                <button onClick={() => setCount(0)}>Reset</button>
+                <button onClick={() => setCount(count + 5)}>+5</button>
+                <button onClick={() => setCount(count - 5)}>-5</button>
+                <button onClick={() => setCount(100)}>Ustaw 100</button>
+            </div>
+        </section>
+    )
 }
 
 export default Counter;

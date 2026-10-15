@@ -63,6 +63,8 @@ function App() {
 
         <main>
 
+          <Counter />
+
           {products.map((product) => {return ( <Product key={product.id} name={product.name} price={product.price} onSelect={selectProduct}/> );})}
 
           <br/><br/><br/>
